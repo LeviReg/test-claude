@@ -283,78 +283,80 @@ const treeTasks = computed(() => {
   margin: 0 auto;
   padding: 24px;
   background: #000000;
-  color: #00ff88;
+  color: #0088ff;
   font-family: 'Courier New', monospace;
   min-height: 100vh;
-  border: 1px solid #00ff88;
-  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  border: 1px solid #0088ff;
+  box-shadow: 0 0 20px rgba(0, 136, 255, 0.3);
 }
 
 header h1 {
   margin-bottom: 4px;
-  color: #00ff88;
-  text-shadow: 0 0 10px #00ff88;
+  color: #0088ff;
+  text-shadow: 0 0 10px #0088ff;
   font-weight: bold;
 }
 
 header p {
   margin-top: 0;
-  color: #00aa66;
+  color: #0066aa;
 }
 
 .note-creation,
 .notes-list,
 .note-detail {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   background: #111111;
-  border: 1px solid #00ff88;
+  border: 1px solid #0088ff;
   border-radius: 8px;
-  padding: 14px;
-  box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 136, 255, 0.2);
 }
 
 .note-creation textarea,
 .note-detail textarea,
 .todo-input input {
   width: 100%;
-  margin-top: 8px;
-  padding: 10px;
+  margin-top: 12px;
+  padding: 12px;
   font-size: 15px;
-  border: 1px solid #00ff88;
+  border: 1px solid #0088ff;
   border-radius: 6px;
   resize: vertical;
   background: #000000;
-  color: #00ff88;
+  color: #0088ff;
   font-family: 'Courier New', monospace;
-  box-shadow: inset 0 0 10px rgba(0, 255, 136, 0.1);
+  box-shadow: inset 0 0 10px rgba(0, 136, 255, 0.1);
+  margin-bottom: 10px;
 }
 
 .note-creation textarea:focus,
 .note-detail textarea:focus,
 .todo-input input:focus {
   outline: none;
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  box-shadow: 0 0 10px rgba(0, 136, 255, 0.5);
 }
 
 .buttons {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 button {
   cursor: pointer;
-  border: 1px solid #00ff88;
+  border: 1px solid #0088ff;
   border-radius: 5px;
   font-size: 14px;
-  padding: 8px 12px;
-  margin-right: 8px;
+  padding: 10px 14px;
+  margin-right: 10px;
+  margin-bottom: 8px;
   background: #000000;
-  color: #00ff88;
+  color: #0088ff;
   font-family: 'Courier New', monospace;
   transition: box-shadow 0.3s;
 }
 
 button:hover {
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  box-shadow: 0 0 10px rgba(0, 136, 255, 0.5);
 }
 
 button.danger {
@@ -377,26 +379,27 @@ button.danger:hover {
 .task-row {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
+  gap: 10px;
+  margin-bottom: 10px;
   border-bottom: 1px solid #333333;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
 }
 
 .notes-list li.active button:first-child {
   font-weight: bold;
-  color: #00ff88;
-  text-shadow: 0 0 5px #00ff88;
+  color: #0088ff;
+  text-shadow: 0 0 5px #0088ff;
 }
 
 .task-row .task-text {
   flex: 1;
-  border: 1px solid #00ff88;
+  border: 1px solid #0088ff;
   border-radius: 4px;
-  padding: 6px;
+  padding: 8px;
   background: #000000;
-  color: #00ff88;
+  color: #0088ff;
   font-family: 'Courier New', monospace;
+  margin-bottom: 5px;
 }
 
 .task-text.done {
@@ -406,23 +409,24 @@ button.danger:hover {
 
 .priority {
   border-radius: 4px;
-  padding: 1px 6px;
-  border: 1px solid #00ff88;
+  padding: 2px 8px;
+  border: 1px solid #0088ff;
   font-size: 12px;
   cursor: pointer;
   background: #000000;
-  color: #00ff88;
+  color: #0088ff;
   font-family: 'Courier New', monospace;
+  margin-left: 5px;
 }
 
 .priority.low {
-  border-color: #00aa66;
-  color: #00aa66;
+  border-color: #0066aa;
+  color: #0066aa;
 }
 
 .priority.normal {
-  border-color: #00ff88;
-  color: #00ff88;
+  border-color: #0088ff;
+  color: #0088ff;
 }
 
 .priority.high {
@@ -431,31 +435,33 @@ button.danger:hover {
 }
 
 .child {
-  margin-left: 24px;
-  border-left: 1px dashed #00ff88;
-  padding-left: 16px;
+  margin-left: 30px;
+  border-left: 1px dashed #0088ff;
+  padding-left: 20px;
 }
 
 .todo-input {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 /* ensure safe selector syntax for environments that reject nested a-rule grammars */
 :where(.notes-list, .todo-tree, .task-row) :is(a) {
-  color: #00ff88;
+  color: #0088ff;
   text-decoration: underline;
 }
 
 .todo-input input {
-  width: calc(100% - 130px);
-  margin-right: 8px;
+  width: calc(100% - 140px);
+  margin-right: 10px;
   background: #000000;
-  color: #00ff88;
-  border: 1px solid #00ff88;
+  color: #0088ff;
+  border: 1px solid #0088ff;
   font-family: 'Courier New', monospace;
+  padding: 8px;
+  margin-bottom: 5px;
 }
 
 .todo-input input:focus {
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  box-shadow: 0 0 10px rgba(0, 136, 255, 0.5);
 }
 </style>
