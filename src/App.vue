@@ -282,28 +282,35 @@ const treeTasks = computed(() => {
   max-width: 980px;
   margin: 0 auto;
   padding: 24px;
-  background: #f8f9fb;
-  color: #1b1f26;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #000000;
+  color: #00ff88;
+  font-family: 'Courier New', monospace;
+  min-height: 100vh;
+  border: 1px solid #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
 header h1 {
   margin-bottom: 4px;
+  color: #00ff88;
+  text-shadow: 0 0 10px #00ff88;
+  font-weight: bold;
 }
 
 header p {
   margin-top: 0;
-  color: #5f6d82;
+  color: #00aa66;
 }
 
 .note-creation,
 .notes-list,
 .note-detail {
   margin-bottom: 20px;
-  background: #ffffff;
+  background: #111111;
+  border: 1px solid #00ff88;
   border-radius: 8px;
   padding: 14px;
-  box-shadow: 0 4px 12px rgba(24, 33, 58, 0.08);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
 }
 
 .note-creation textarea,
@@ -313,10 +320,20 @@ header p {
   margin-top: 8px;
   padding: 10px;
   font-size: 15px;
-  border: 1px solid #dde3ee;
+  border: 1px solid #00ff88;
   border-radius: 6px;
   resize: vertical;
-  background: #fbfdff;
+  background: #000000;
+  color: #00ff88;
+  font-family: 'Courier New', monospace;
+  box-shadow: inset 0 0 10px rgba(0, 255, 136, 0.1);
+}
+
+.note-creation textarea:focus,
+.note-detail textarea:focus,
+.todo-input input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
 }
 
 .buttons {
@@ -325,25 +342,28 @@ header p {
 
 button {
   cursor: pointer;
-  border: none;
+  border: 1px solid #00ff88;
   border-radius: 5px;
   font-size: 14px;
   padding: 8px 12px;
   margin-right: 8px;
+  background: #000000;
+  color: #00ff88;
+  font-family: 'Courier New', monospace;
+  transition: box-shadow 0.3s;
 }
 
 button:hover {
-  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
 }
 
 button.danger {
-  background: #e63f3f;
-  color: white;
+  border-color: #ff4444;
+  color: #ff4444;
 }
 
-button:not(.danger) {
-  background: #3f75e6;
-  color: white;
+button.danger:hover {
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
 }
 
 .notes-list ul,
@@ -359,50 +379,60 @@ button:not(.danger) {
   align-items: center;
   gap: 8px;
   margin-bottom: 6px;
+  border-bottom: 1px solid #333333;
+  padding-bottom: 4px;
 }
 
 .notes-list li.active button:first-child {
-  font-weight: 700;
+  font-weight: bold;
+  color: #00ff88;
+  text-shadow: 0 0 5px #00ff88;
 }
 
 .task-row .task-text {
   flex: 1;
-  border: 1px solid #d9e2f1;
+  border: 1px solid #00ff88;
   border-radius: 4px;
   padding: 6px;
+  background: #000000;
+  color: #00ff88;
+  font-family: 'Courier New', monospace;
 }
 
 .task-text.done {
   text-decoration: line-through;
-  color: #8f96a2;
+  color: #666666;
 }
 
 .priority {
   border-radius: 4px;
   padding: 1px 6px;
-  border: 1px solid #8f96a2;
+  border: 1px solid #00ff88;
   font-size: 12px;
   cursor: pointer;
+  background: #000000;
+  color: #00ff88;
+  font-family: 'Courier New', monospace;
 }
 
 .priority.low {
-  background: #eaf5e4;
-  color: #2b7f2e;
+  border-color: #00aa66;
+  color: #00aa66;
 }
 
 .priority.normal {
-  background: #f1f5ff;
-  color: #2f4cab;
+  border-color: #00ff88;
+  color: #00ff88;
 }
 
 .priority.high {
-  background: #fbe5e0;
-  color: #b52d1c;
+  border-color: #ff4444;
+  color: #ff4444;
 }
 
 .child {
   margin-left: 24px;
-  border-left: 1px dashed #dde3ee;
+  border-left: 1px dashed #00ff88;
   padding-left: 16px;
 }
 
@@ -412,12 +442,20 @@ button:not(.danger) {
 
 /* ensure safe selector syntax for environments that reject nested a-rule grammars */
 :where(.notes-list, .todo-tree, .task-row) :is(a) {
-  color: #3f75e6;
+  color: #00ff88;
   text-decoration: underline;
 }
 
 .todo-input input {
   width: calc(100% - 130px);
   margin-right: 8px;
+  background: #000000;
+  color: #00ff88;
+  border: 1px solid #00ff88;
+  font-family: 'Courier New', monospace;
+}
+
+.todo-input input:focus {
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
 }
 </style>
