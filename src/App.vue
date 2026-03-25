@@ -281,91 +281,91 @@ const treeTasks = computed(() => {
 .container {
   max-width: 980px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 32px;
   background: #000000;
-  color: #0088ff;
+  color: #66b3ff;
   font-family: 'Courier New', monospace;
   min-height: 100vh;
-  border: 1px solid #0088ff;
-  box-shadow: 0 0 20px rgba(0, 136, 255, 0.3);
+  border: 1px solid #66b3ff;
+  box-shadow: 0 0 10px rgba(102, 179, 255, 0.2);
 }
 
 header h1 {
-  margin-bottom: 4px;
-  color: #0088ff;
-  text-shadow: 0 0 10px #0088ff;
+  margin-bottom: 8px;
+  color: #66b3ff;
+  text-shadow: 0 0 5px #66b3ff;
   font-weight: bold;
 }
 
 header p {
   margin-top: 0;
-  color: #0066aa;
+  color: #66a3aa;
 }
 
 .note-creation,
 .notes-list,
 .note-detail {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   background: #111111;
-  border: 1px solid #0088ff;
+  border: 1px solid #66b3ff;
   border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 0 15px rgba(0, 136, 255, 0.2);
+  padding: 24px;
+  box-shadow: 0 0 8px rgba(102, 179, 255, 0.15);
 }
 
 .note-creation textarea,
 .note-detail textarea,
 .todo-input input {
   width: 100%;
-  margin-top: 12px;
-  padding: 12px;
+  margin-top: 16px;
+  padding: 16px;
   font-size: 15px;
-  border: 1px solid #0088ff;
+  border: 1px solid #66b3ff;
   border-radius: 6px;
   resize: vertical;
   background: #000000;
-  color: #0088ff;
+  color: #66b3ff;
   font-family: 'Courier New', monospace;
-  box-shadow: inset 0 0 10px rgba(0, 136, 255, 0.1);
-  margin-bottom: 10px;
+  box-shadow: inset 0 0 5px rgba(102, 179, 255, 0.1);
+  margin-bottom: 12px;
 }
 
 .note-creation textarea:focus,
 .note-detail textarea:focus,
 .todo-input input:focus {
   outline: none;
-  box-shadow: 0 0 10px rgba(0, 136, 255, 0.5);
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.3);
 }
 
 .buttons {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 button {
   cursor: pointer;
-  border: 1px solid #0088ff;
+  border: 1px solid #66b3ff;
   border-radius: 5px;
   font-size: 14px;
-  padding: 10px 14px;
-  margin-right: 10px;
-  margin-bottom: 8px;
+  padding: 12px 16px;
+  margin-right: 12px;
+  margin-bottom: 10px;
   background: #000000;
-  color: #0088ff;
+  color: #66b3ff;
   font-family: 'Courier New', monospace;
   transition: box-shadow 0.3s;
 }
 
 button:hover {
-  box-shadow: 0 0 10px rgba(0, 136, 255, 0.5);
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.3);
 }
 
 button.danger {
-  border-color: #ff4444;
-  color: #ff4444;
+  border-color: #ff6666;
+  color: #ff6666;
 }
 
 button.danger:hover {
-  box-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+  box-shadow: 0 0 5px rgba(255, 102, 102, 0.3);
 }
 
 .notes-list ul,
@@ -379,27 +379,27 @@ button.danger:hover {
 .task-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 12px;
+  margin-bottom: 12px;
   border-bottom: 1px solid #333333;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
 }
 
 .notes-list li.active button:first-child {
   font-weight: bold;
-  color: #0088ff;
-  text-shadow: 0 0 5px #0088ff;
+  color: #66b3ff;
+  text-shadow: 0 0 3px #66b3ff;
 }
 
 .task-row .task-text {
   flex: 1;
-  border: 1px solid #0088ff;
+  border: 1px solid #66b3ff;
   border-radius: 4px;
-  padding: 8px;
+  padding: 10px;
   background: #000000;
-  color: #0088ff;
+  color: #66b3ff;
   font-family: 'Courier New', monospace;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .task-text.done {
@@ -409,59 +409,59 @@ button.danger:hover {
 
 .priority {
   border-radius: 4px;
-  padding: 2px 8px;
-  border: 1px solid #0088ff;
+  padding: 3px 10px;
+  border: 1px solid #66b3ff;
   font-size: 12px;
   cursor: pointer;
   background: #000000;
-  color: #0088ff;
+  color: #66b3ff;
   font-family: 'Courier New', monospace;
-  margin-left: 5px;
+  margin-left: 6px;
 }
 
 .priority.low {
-  border-color: #0066aa;
-  color: #0066aa;
+  border-color: #66a3aa;
+  color: #66a3aa;
 }
 
 .priority.normal {
-  border-color: #0088ff;
-  color: #0088ff;
+  border-color: #66b3ff;
+  color: #66b3ff;
 }
 
 .priority.high {
-  border-color: #ff4444;
-  color: #ff4444;
+  border-color: #ff6666;
+  color: #ff6666;
 }
 
 .child {
-  margin-left: 30px;
-  border-left: 1px dashed #0088ff;
-  padding-left: 20px;
+  margin-left: 36px;
+  border-left: 1px dashed #66b3ff;
+  padding-left: 24px;
 }
 
 .todo-input {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 /* ensure safe selector syntax for environments that reject nested a-rule grammars */
 :where(.notes-list, .todo-tree, .task-row) :is(a) {
-  color: #0088ff;
+  color: #66b3ff;
   text-decoration: underline;
 }
 
 .todo-input input {
-  width: calc(100% - 140px);
-  margin-right: 10px;
+  width: calc(100% - 150px);
+  margin-right: 12px;
   background: #000000;
-  color: #0088ff;
-  border: 1px solid #0088ff;
+  color: #66b3ff;
+  border: 1px solid #66b3ff;
   font-family: 'Courier New', monospace;
-  padding: 8px;
-  margin-bottom: 5px;
+  padding: 10px;
+  margin-bottom: 6px;
 }
 
 .todo-input input:focus {
-  box-shadow: 0 0 10px rgba(0, 136, 255, 0.5);
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.3);
 }
 </style>
