@@ -410,6 +410,12 @@ button:not(.danger) {
   margin-top: 10px;
 }
 
+/* ensure safe selector syntax for environments that reject nested a-rule grammars */
+:where(.notes-list, .todo-tree, .task-row) :is(a) {
+  color: #3f75e6;
+  text-decoration: underline;
+}
+
 .todo-input input {
   width: calc(100% - 130px);
   margin-right: 8px;
